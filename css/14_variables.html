@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            /* literally store anything in variables not just color */
+            --color: rgb(159, 211, 244);
+            --seccolor: rgb(119, 218, 136);
+            --aurekcolor: rgb(252, 137, 137);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: var(--aurekcolor);
+        }
+        ul {
+            display: flex;
+        }
+        li {
+            list-style: none;
+            padding: 10px;
+            background-color: var(--color)
+        }
+        nav div {
+            background-color: var(--seccolor)
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+        </ul>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nisi nostrum non accusantium. Earum sint eligendi tempora tenetur, cupiditate eaque saepe aspernatur nihil incidunt ipsa aliquid enim dignissimos aut aperiam dolore facere voluptates. Nulla exercitationem consequuntur atque esse laborum ipsa. Vero in sapiente quibusdam dolore?</div>
+    </nav>
+</body>
+</html>

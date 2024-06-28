@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        .card {
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 480px;
+            width: 250px;
+
+        }
+        .card > img {
+            border-radius: 10px;
+            height: 50%;
+            width: 240px;
+            padding: 5px;
+        }
+        .sml {
+            display: inline-block;
+            margin: 2px;
+            margin-left: 8px;
+            border: 1px solid grey;
+            border-radius: 8px;
+            padding: 4px;
+            font-size: 10px;
+            width: 32px;
+            text-align: center;
+            color: grey;
+        }
+        .text {
+            margin: 8px;
+        }
+        .text > h2 {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        .text > p {
+            color: grey;
+            margin-top: 0px;;
+        }
+        .button {
+            background-color: rgb(177, 223, 246);
+            color: rgb(48, 131, 231);
+            width: 40%;
+            padding: 10px;
+            text-align: center;
+            border-radius: 28px;
+            font-size: 15px;
+            font-weight: 750;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .test {
+            margin: 60px;
+            display: inline-block;
+            background-color: rgb(177, 223, 246);
+            color: rgb(48, 131, 231);
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 28px;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .test:visited {
+            color: rgb(48, 131, 231);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMp2QN2WCx7VRAXuJme-AcdxJJeXRSM3obFhXX_uIKvQ&s" alt="image">
+        <span class="sml">Nature</span>
+        <span class="sml">Lake</span>
+        <div class="text">
+            <h2>Loren Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis numquam atque distinctio minus nulla veritatis fuga quaerat perferendis?</p>
+        </div>
+        <div class="button" href="#">
+            Read More
+        </div>
+    </div>
+    <a href="https://www.youtube.com/" class="test" target="_blank">Go To Youtube</a>
+</body>
+</html>

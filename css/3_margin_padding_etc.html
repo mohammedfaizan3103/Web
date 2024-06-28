@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* margin is not included while setting height and width */
+    /* margin border padding element */
+    .box {
+        background-color: black;
+    }
+    .box1 {
+        color: yellow;
+        margin: 0px;
+        padding: 20px;
+        border: 2px solid blue;
+    }
+    .box2 {
+        color: white;
+        margin: 20px;
+        padding: 0px;
+        border: 2px solid blue;
+        height: 150px;
+        /* If boxsizing border box is not given in that case the height speicified is only the height of the element but if border box is given it means height parameter included border and padding but not margin becoz margin is outside the element  */
+        box-sizing: border-box;
+    }
+    /* if margin of two elements is collapsing the entire margin between both the elements will be the maximum margin not the sum of both */
+</style>
+<body>
+    <div class="box box1">This has zero margin but padding</div>
+    <div class="box box2">This has zero padding but border</div>
+</body>
+</html>

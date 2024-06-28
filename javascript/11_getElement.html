@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box" id="redbox">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+    <script>
+        // document.getElementsByClassName('')
+        // document.getElementById()
+        // document.querySelector(css) returns only 1 element
+        // document.getElementsByTagName()
+        // e.matches(css)
+        e = document.querySelectorAll(".box")
+        console.log(e)
+        e.forEach(element => {
+            element.style.backgroundColor = "green"
+        });
+        red = document.getElementById('redbox')
+        red.style.backgroundColor = 'red'
+        console.log(red.matches("#redbox"))
+        console.log(document.querySelector('.container').contains(document.querySelector('.box')))
+        console.log(document.querySelector('.box').closest('.container'))
+        // matches and closest take css identifier as input whereas matches take the element as input
+    </script>
+    <!-- 
+        document.getElementsByClassName('box')
+        HTMLCollection(5) [div.box, div.box, div.box, div.box, div.box]
+        document.querySelectorAll('.box')
+        NodeList(5) [div.box, div.box, div.box, div.box, div.box]
+        nodelist is foreachable while htmlcollection is not
+     -->
+</body>
+</html>

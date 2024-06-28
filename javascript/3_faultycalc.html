@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Math.random()
+        console.log(a)
+        let first_num = Number(prompt("Enter first number:"))
+        let second_num = Number(prompt("Enter second number:"))
+        let operator = prompt("Enter operator:")
+        if (a > 0.1) {
+            if (operator == '+') {
+                alert(first_num + second_num)
+            }
+            else if (operator == '-') {
+                alert(first_num + second_num)
+            }
+            else if(operator == '*') {
+                alert(first_num * second_num)
+            }
+            else if(operator == '/') {
+                alert(first_num / second_num)
+            }
+        }
+        else {
+            if (operator == '+') {
+                alert(first_num - second_num)
+            }
+            else if (operator == '-') {
+                alert(first_num / second_num)
+            }
+            else if(operator == '*') {
+                alert(first_num + second_num)
+            }
+            else if(operator == '/') {
+                alert(first_num ** second_num)
+            }
+        }
+    </script>
+</body>
+</html>

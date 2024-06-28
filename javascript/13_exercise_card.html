@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .card {
+            /* height: 25vh; */
+            display: flex;
+            align-items: center;
+            background-color: black;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .img {
+            height: 20vh;
+            position: relative;
+        }
+
+        .img img {
+            height: 20vh;
+            border-radius: 10px;
+        }
+
+        .time {
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            right: 5px;
+            font-size: 12px;
+            border-radius: 3px;
+            padding: 1px 2px;
+            background-color: rgba(0, 0, 0, 0.66);
+        }
+
+        .title {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .content {
+            margin: 10px;
+        }
+
+        .details {
+            color: grey;
+        }
+
+        .details ul {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            gap: 20px;
+        }
+
+        .channel {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8ohrGxDt9HIbP7yXPhwiGwqmhEQ"
+                    alt="">
+                <div class="time">
+                    31:20
+                </div>
+            </div>
+            <div class="content">
+                <div class="title">
+                    Sigma Web Development Course
+                </div>
+                <div class="details">
+                    <ul>
+                        <li class="channel">CodeWithHarry</li>
+                        <li>1.6M views</li>
+                        <li>7 months ago</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function createCard(title, channel, views, months_old, timestamp, thumbnail) {
+            // Finish this function
+            
+            let views_str = undefined
+            // process views
+            if (views / 1000000 >= 1) {
+                views_str = `${views / 1000000}M`
+            }
+            else if (views / 1000 >= 1) {
+                views_str = `${views / 1000}K`
+            }
+            else {
+                views_str = `${views}`
+            }
+            console.log(views_str)
+            let card = document.createElement('div')
+            card.className = 'card'
+            let img = document.createElement('div')
+            img.className = 'img'
+            img.innerHTML = `<img src="${thumbnail}" alt="">
+                <div class="time">
+                    ${timestamp}
+                </div>`
+            card.append(img)
+            let content = document.createElement('div')
+            content.className = 'content'
+            content.innerHTML = `<div class="title">
+                    ${title}
+                </div>
+                <div class="details">
+                    <ul>
+                        <li class="channel">${channel}</li>
+                        <li>${views_str} views</li>
+                        <li>${months_old} months ago</li>
+                    </ul>
+                </div>`
+            card.append(content)
+            cont = document.querySelector('.container')
+            cont.append(card)
+        }
+        //createCard("Introduction to Backend | Sigma Web Dev video #2", "CodeWithHarry", 560000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw")
+        do {
+            var conf = confirm("Add card")
+            if (conf) {
+                let title = prompt("Enter title:")
+                let timestamp = prompt("Enter timestamp:")
+                let channel = prompt("Enter channel name")
+                let views = Number(prompt("Enter number of views"))
+                let months_old = Number(prompt("Enter months old:"))
+                let thumbnail = prompt("Enter thumbnail")
+                createCard(title, channel, views, months_old, timestamp, thumbnail)
+            }
+        } while (conf)
+    </script>
+</body>
+
+</html>

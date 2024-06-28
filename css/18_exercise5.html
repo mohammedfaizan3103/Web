@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+        }
+
+        header nav {
+            background-color: purple;
+            padding: 10px;
+        }
+
+        header nav li {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            display: inline;
+            list-style: none;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .outer {
+            background-color: green;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+
+        .inner {
+            text-align: left;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 40%;
+            font-size: 20px;
+        }
+
+        .inner:nth-child(1) {
+            background-color: pink;
+
+        }
+
+        .inner:nth-child(2) {
+            background-color: orange;
+            margin-left: 32px;
+        }
+
+        .temp {
+            width: 80%;
+            display: inline-block;
+            /* margin-left: auto;
+                margin-right: auto; */
+        }
+
+        .curve {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-size: 40px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+
+        .absol {
+            position: fixed;
+            bottom: 2px;
+            right: 2px;
+            background-color: yellow;
+            font-size: 35px;
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        main {
+            /* min-height: 87vh; */
+            min-height: 100vh;
+        }
+
+        .footer {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        @media only screen and (orientation: portrait) {
+            .curve {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div class="outer">
+            <div class="temp">
+                <div class="inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae in cum porro
+                    quisquam praesentium omnis voluptatum distinctio repudiandae! Tempora rerum reprehenderit omnis iure
+                    corrupti, accusantium cumque ipsum eos ullam. Asperiores dolorem neque animi quis quae consequatur.
+                    Sint nihil nisi cupiditate libero consequuntur, quis nobis dicta qui cumque error dolor quibusdam
+                    culpa assumenda temporibus cum odio recusandae dignissimos ipsam. Commodi quia totam ad libero.
+                    Alias magni in, iusto quaerat velit consequatur!</div>
+                <div class="inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae in cum porro
+                    quisquam praesentium omnis voluptatum distinctio repudiandae! Tempora rerum reprehenderit omnis iure
+                    corrupti, accusantium cumque ipsum eos ullam. Asperiores dolorem neque animi quis quae consequatur.
+                    Sint nihil nisi cupiditate libero consequuntur, quis nobis dicta qui cumque error dolor quibusdam
+                    culpa assumenda temporibus cum odio recusandae dignissimos ipsam. Commodi quia totam ad libero.
+                    Alias magni in, iusto quaerat velit consequatur!</div>
+            </div>
+        </div>
+        <div>
+            <div class="curve">
+                Welcome to Sigma WEB Development Course
+            </div>
+        </div>
+    </main>
+    <div class="footer">Copyright &copy</div>
+    <div class="absol"></div>
+</body>
+
+</html>

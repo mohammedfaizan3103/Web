@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* main axis gets justify content cross axis gets align items
+        default main axis is x axis i.e r
+        justify content and co.: flex-start flex-end etc.*/
+        /* align content: used in multiple line */
+        /* 1. Order:
+        As the name suggests, this property sets the order in which the flex items are shown.
+        Eg:
+        <div style="order: 4;">1</div>
+        <div style="order: 3;">2</div>
+        <div style="order: 1;">3</div>
+        <div style="order: 5;">4</div>
+        <div style="order: 2;">5</div>
+        2. Flex Grow & Shrink
+        Decides the relative size of flex items. By default, this property is zero and thus items have the same size.
+        Eg:
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-grow: 3;">3</div>
+        <div>4</div>
+        <div>5</div> */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: beige;
+            border: 2px solid maroon;
+            display: flex;
+            width: 100vw;
+            height: 800px;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            /* gap: 5px; */
+            /* align-content: center; */
+            column-gap: 4px;
+            row-gap: 20px;
+        }
+
+        .item {
+            background-color: purple;
+            border: 4px solid red;
+            height: 64px;
+            width: 64px;
+        }
+
+        .lol {
+            /* if i remove align content this will work */
+            align-self: flex-start
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="container">
+        <div class="item lol"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>

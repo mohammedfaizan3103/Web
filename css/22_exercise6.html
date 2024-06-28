@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <style>
+        /* justify content space around and gap property can be used */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: blanchedalmond;
+        }
+        nav {
+            background-color: #fff;
+            display: flex;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .logo {
+            align-self: flex-start;
+        }
+        .logo img{
+            width: 174.65px;
+            height: 56px;
+        }
+        .content {
+            align-self: center;
+            margin-left: auto;
+        }
+        ul {
+            display: flex;
+        }
+        li {
+            margin: 10px;
+            list-style: none;
+            font-size: 18px;
+        }
+        .content ul li img {
+            height: 10px;
+            width: 10px;
+        }
+        .content ul li img.lang {
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="Logo">
+            </div>
+            <div class="content">
+                <ul>
+                    <li class="item">
+                        <span>Products</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>Pricing</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>Resources</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>About Us</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>Security and Compliance</span>
+                    </li>
+                    <li class="item">
+                        <img class="lang" src="lang.png" alt="lang">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

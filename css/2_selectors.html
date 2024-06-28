@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+        /* direct child */
+        div > p {
+            background-color: green;
+        }
+        /* all descendents */
+        div p {
+            background-color: black;
+            color: yellow;
+        }
+        * {
+            margin: 0;
+        }
+        /* pseudoselectors */
+        a:link {
+            color: black;
+        }
+        a:visited{
+            color: green;
+        }
+        a:hover {
+            background-color: aqua;
+        }
+        /* p:first-child {
+            background-color: yellow;
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <div class="red">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate delectus enim ad!
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus explicabo tempora illum, fugiat laborum molestias!
+        </p>
+    </div>
+    <div id="yellow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officiis vero autem consequatur pariatur, reiciendis quas sapiente maiores temporibus libero!
+        <article>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, rem qui ipsam recusandae in possimus facere, delectus neque libero eaque necessitatibus. Sapiente, alias.
+            </p>
+        </article>
+    </div>
+    <a href="https://www.google.com">Google</a>
+</body>
+</html>

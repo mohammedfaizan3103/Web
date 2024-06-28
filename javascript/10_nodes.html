@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 54px;
+            width: 54px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 5</div>
+    </div>
+    <!-- 
+        Hello World
+        document.body.childNodes
+        NodeList(5) [text, div.container, text, script, text]
+        document.body.firstChild
+        #text
+        let box = document.body.childNodes[1].firstElementChild
+        undefined
+        box
+        <div class=​"box">​Box 1​</div>​
+        box.style.backgroundColor = "black"
+        'black'
+        box.style.color = "yellow"
+        'yellow'
+        let container = document.body.firstElementChild
+        undefined
+        container.childNodes
+        NodeList(11) [text, div.box, text, div.box, text, div.box, text, div.box, text, div.box, text]
+        container.children
+        HTMLCollection(5) [div.box, div.box, div.box, div.box, div.box]
+        let box1 = container.children[0]
+        undefined
+        box1.parentNode
+        .previousElementSibling
+        .nextElementSibling
+        .firstElementChild // last
+     -->
+    <script>
+        console.log("Hello World")
+    </script>
+</body>
+</html>

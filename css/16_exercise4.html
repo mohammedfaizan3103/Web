@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --backcolor: rgb(50, 47, 47);
+            --golden: rgb(238, 223, 63);
+        }
+        nav {
+            background-color: var(--backcolor);
+            color: white;
+            padding: 10px;
+            display: flex;
+        }
+        nav ul li {
+            margin-top: auto;
+            margin-bottom: auto;
+            display: inline-block;
+            margin-left: 6px;
+            margin-right: 6px;
+            font-size: 18px;
+        }
+        .header {
+            margin: 5px
+        }
+        .header h2 {
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 28px;
+        }
+        .search {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            
+        }
+        .search form input{
+            height: 26px;
+            border-radius: 5px;
+        }
+        .search form input.button {
+            margin: 6px;
+            height: 30px; 
+            width: 80px;
+            background-color: var(--backcolor);
+            color: var(--golden);
+            border: 1.5px solid var(--golden);
+            border-radius: 7px;
+        }
+        .search form input.button:hover {
+            background-color: var(--golden);
+            color: var(--backcolor);
+            border: 1.5px solid var(--golden);
+        }
+        @media only screen and (orientation: portrait) {
+            nav {
+                display: block ;
+            }
+            .search {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li class="header">
+                <h2>Nav</h2>
+            </li>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+        </ul>
+        <span class="search">
+            <form action="/">
+                <input type="text" placeholder="Search">
+                <input class="button" type="button" value="Search">
+            </form>
+        </span>
+    </nav>
+</body>
+</html>

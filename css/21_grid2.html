@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: antiquewhite;
+            border: 2px solid black;
+            width: 100vw;
+            height: 400px;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                    "side main main"
+                                    "footer footer footer";
+        }
+        .item {
+            color: white;
+            border: 2px solid red;
+        }
+        .item1{
+            background-color: black;
+            grid-area: nav;
+        }
+        .item2{
+            background-color: blue;
+            grid-area: side;
+        }
+        .item3{
+            background-color: purple;
+            grid-area: main;
+        }
+        .item4{
+            background-color: green;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+    </div>
+</body>
+</html>

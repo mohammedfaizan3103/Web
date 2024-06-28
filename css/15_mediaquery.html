@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+        /* when height is more than width of the viewing device */
+        @media only screen and (orientation: portrait) {
+            .box {
+                border: 20px solid purple;
+                background-color: black;
+            }
+        }
+        @media only screen and (max-width: 455px) {
+            .boxes {
+                flex-direction: column;
+            }
+            body {
+                background-color: red;
+            }
+        }
+        .boxes {
+            display: flex;
+        }
+        .box {
+            background-color: antiquewhite;
+            height: 300px;
+            width: 300px;
+            margin:2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

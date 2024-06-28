@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity</title>
+    <style>
+        /* 
+        highest preference is given to !important tag given after the before the semicolon
+        inline css > id selector > class or attribute or pseudo class > element selector > universal selector
+        Universal Selector: 0
+        Element selectors and pseudo-elements: 1
+        Class selectors, attribute selectors, and pseudo-classes: 10
+        ID selectors: 100
+        Inline styles: 1000
+        attribute selector
+        [data-x=a] {
+            color: maroon;
+        }
+        replace data-x with anything or only [data-x] means if this attribute exists
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+        The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41
+        if on the same level then what is given later in the css file or tag is given higher preference
+        */
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: antiquewhite;
+            height: 50vh;
+            width: 40vw;
+        }
+        .box {
+            background-color: aqua;
+            height: 5vh;
+            width: 4vw;
+            /* on what properties to apply csv */
+            transition: transform, background-color; 
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+            /* transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s; */
+        }
+        .transform {
+            transform: translateX(10vw) translateY(20vh) scale(4);
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box transform"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* justify items align items center start end can be used to align items inside the cell of the grid */
+        /* jusify content align content center start end can be used to align the whole grid inside the given container */
+        /* fr unit is given if i give grid template rows 1fr 2fr 1fr it is one part of the toal area allocated then 2 parts to the second row and so on */
+        /* place-content takes care of both justify content and align content */
+        .box {
+            background-color: antiquewhite;
+            border: 2px solid black;
+            width: 100vw;
+            height: 400px;
+            display: grid;
+            grid-template-columns: [pehla]120px [doosra]100px [teesra];
+            grid-template-rows: 100px 100px 100px;
+        }
+        .item {
+            color: white;
+            background-color: blue;
+            border: 2px solid red;
+            width: 55px;
+            height: 55px;
+        }
+        .item:nth-child(5) {
+            grid-column: doosra/teesra;
+        }
+        .item:nth-child(4) {
+            grid-column: 1/2;
+            grid-row:1/2
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <style>
+        /* justify content space around and gap property can be used */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #fff;
+        }
+        nav {
+            background-color: #fff;
+            display: flex;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .logo {
+            align-self: flex-start;
+        }
+        .logo img{
+            width: 174.65px;
+            height: 56px;
+        }
+        .content {
+            align-self: center;
+            margin-left: auto;
+        }
+        ul {
+            display: flex;
+        }
+        li {
+            margin: 10px;
+            list-style: none;
+            font-size: 18px;
+        }
+        .content ul li img {
+            height: 10px;
+            width: 10px;
+        }
+        .content ul li img.lang {
+            height: 20px;
+            width: 20px;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 70vw;
+            display: grid;
+            row-gap: 20px;
+            column-gap: 28px;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+            
+        }
+        .box {
+            background-color: #eee7e7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 100%;
+        }
+        main .container .box a {
+            text-decoration: none;
+            background-color: #81c780;
+            color: white;
+            padding: 10px;
+            font-size: 12px;
+            border-radius: 7px;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        main .container .box h3 {
+            margin: 10px;
+        }
+        main .container .box p {
+            margin-bottom: 10px;
+        }
+        @media only screen and (orientation: portrait) {
+            header {
+                overflow: auto;
+            }
+            .container {
+                width: 100vw;
+                margin: 0 100px;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="Logo">
+            </div>
+            <div class="content">
+                <ul>
+                    <li class="item">
+                        <span>Products</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>Pricing</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>Resources</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>About Us</span>
+                        <img src="down-arrow.png" alt="down">
+                    </li>
+                    <li class="item">
+                        <span>Security and Compliance</span>
+                    </li>
+                    <li class="item">
+                        <img class="lang" src="lang.png" alt="lang">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box">
+                <h3>English</h3>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>Deutsch</h3>
+                <p>German</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>Italiano</h3>
+                <p>Italian</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>Español</h3>
+                <p>Spanish</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>français</h3>
+                <p>French</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>Português brasileiro</h3>
+                <p>Brazilian Portuguese</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>日本</h3>
+                <p>Japanese</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>한국어</h3>
+                <p>Korean</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>中国</h3>
+                <p>Chinese</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+            <div class="box">
+                <h3>中國</h3>
+                <p>Traditional Chinese</p>
+                <a href="/" class="down">Download 64-bit</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
