@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getData() {
+            // fetch is used to get data from an API
+            /*
+            we are using await because it takes time to get data
+            json is used to convert the string data into json format
+            which also takes time
+            so await in all cases
+            await is used to prevent the remaining statements in the function to be used fucntions outside the function gets executed regardless the job previously is completed or not
+            the codes in the previous page which used timeout is used to pretend like this api is taking time
+            */
+            let x = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+            let data = await x.json()
+            return data
+        }
+        async function main() {
+            console.log("Loading Modules")
+            console.log("Getting data")
+            data = await getData()
+            console.log(data)
+            console.log("Processing data")
+        }
+        main()
+        console.log("without async")
+    </script>
+</body>
+</html>
