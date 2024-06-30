@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Hello World
+        </div>
+    </div>
+    <button class="btn">Click me</button>
+    <script>
+        // List of all mouse events 
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events
+        //  e.stopPropagation() to stop event bubbling
+
+        btn = document.querySelector(".btn")
+        btn.addEventListener("click", () => {
+            box = document.querySelector(".box")
+            box.innerHTML = "<b> You've been clicked </b> Yaayyy!!!"
+        })
+    </script>
+</body>
+</html>

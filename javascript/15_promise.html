@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getData() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("This is data")
+                }, 5000);
+            })
+        }
+/*
+What is Promise why do we use it
+basically if a function is taking time js will leave it and execute other lines of code
+so what we will do is we will return a promise and in then fucntion of the promise we pass a function which will have the lines to execute once we complete that function
+another way is async await......
+*/
+        console.log("Loading Modules")
+        console.log("Getting data")
+        data = getData()
+        data.then((v) => {
+            console.log(data)
+            console.log("Processing data")
+        })
+    </script>
+</body>
+</html>

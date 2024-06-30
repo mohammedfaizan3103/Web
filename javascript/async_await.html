@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function getData() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("This is data")
+                }, 5000)
+            })
+        }
+        // await can only be used in async function 
+        // async function can be made to wait
+        async function main() {
+            console.log("Loading Modules")
+            console.log("Getting data")
+            data = await getData()
+            console.log(data)
+            console.log("Processing data")
+        }
+        main()
+    </script>
+</body>
+
+</html>
