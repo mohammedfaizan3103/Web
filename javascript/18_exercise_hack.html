@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+        </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            margin: 5px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            width: 100vw;
+            /* background-color: red; */
+        }
+
+        .terminal {
+            font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  font-style: normal;
+            font-size: 24px;
+            padding: 25px;
+            background-color: black;
+            color: rgb(46, 238, 62);
+            height: 50vh;
+            width: 75vw;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 7 seconds 
+    
+    Initializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server...
+    Cleaning up...
+
+    The three dots must blink so that it looks like a real terminal
+    -->
+    <div class="container">
+        <div class="terminal">
+            <div>Initializing Hacking</div>
+        </div>
+    </div>
+    <script>
+        function randomInt(min, max) {
+            return min + Math.random() * (max - min)
+        }
+        function randomDelay() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve()
+                }, randomInt(1000, 8000));
+            })
+        }
+        async function addItem(item) {
+            await randomDelay()
+            return new Promise((resolve, reject) => {
+                let div = document.createElement('div')
+                div.innerHTML = item
+                let terminal = document.querySelector('.terminal')
+                terminal.append(div)
+                resolve()
+            })
+        }
+        async function main() {
+            text = ["Initialized Hacking now retreving you data", "Reading your Files", "Password files Detected", "Sending all passwords and personal files to server", "Cleaning up"]
+            let t = setInterval(() => {
+                let terminal = document.querySelector('.terminal')
+                let ele = terminal.lastElementChild
+                if(ele.innerHTML.endsWith('...')) {
+                    ele.innerHTML = ele.innerHTML.slice(0, ele.innerHTML.length - 3)
+                }
+                else {
+                    ele.innerHTML = ele.innerHTML + '.'
+                    counter++
+                }
+            }, 750)
+            for(const item of text) {
+                await addItem(item)
+            }
+            await randomDelay()
+            clearInterval(t)
+            let div = document.createElement('div')
+                div.innerHTML = "You have been hacked!!!"
+                let terminal = document.querySelector('.terminal')
+                terminal.append(div)
+            terminal.style.color = 'red'
+        }
+        main()
+    </script>
+</body>
+
+</html>
