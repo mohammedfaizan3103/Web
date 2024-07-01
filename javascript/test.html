@@ -17,11 +17,24 @@
 
     </div>
     <script>
-        let cont = document.querySelector('.container')
-        let div = document.createElement('div')
-        div.className = 'box'
-        div.innerHTML = 'hello'
-        cont.append(div)
+       async function mapping(arr) {
+    let new_arr = arr.map((e) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(e * 2)
+            }, 500);
+        })
+    })
+    return new_arr
+}
+let nums = [1, 2, 3, 4 ,5]
+console.log(mapping(nums))
+
+async function main() {
+    let another_arr = await mapping(nums);
+    console.log(another_arr);
+}
+// main()
     </script>
 </body>
 </html>

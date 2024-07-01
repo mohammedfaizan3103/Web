@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function saveNote(note) {
+            localStorage.setItem("note", JSON.stringify(note))
+        }
+        let name = prompt("Enter your name")
+        let note = prompt("Enter note")
+        object = {
+            "name" : name,
+            "note" : note
+        }
+        saveNote(object)
+        let conf = confirm("Display note")
+        out = localStorage.getItem("note")
+        out = JSON.parse(out)
+        console.log(out)
+        document.write("Check logs")
+    </script>
+</body>
+</html>

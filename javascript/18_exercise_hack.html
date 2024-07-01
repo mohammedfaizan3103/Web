@@ -7,15 +7,17 @@
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
-        </style>
+    </style>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+
         div {
             margin: 5px;
         }
+
         .container {
             display: flex;
             align-items: center;
@@ -27,8 +29,8 @@
 
         .terminal {
             font-family: "Anonymous Pro", monospace;
-  font-weight: 400;
-  font-style: normal;
+            font-weight: 400;
+            font-style: normal;
             font-size: 24px;
             padding: 25px;
             background-color: black;
@@ -81,23 +83,22 @@
             let t = setInterval(() => {
                 let terminal = document.querySelector('.terminal')
                 let ele = terminal.lastElementChild
-                if(ele.innerHTML.endsWith('...')) {
+                if (ele.innerHTML.endsWith('...')) {
                     ele.innerHTML = ele.innerHTML.slice(0, ele.innerHTML.length - 3)
                 }
                 else {
                     ele.innerHTML = ele.innerHTML + '.'
-                    counter++
                 }
             }, 750)
-            for(const item of text) {
+            for (const item of text) {
                 await addItem(item)
             }
             await randomDelay()
             clearInterval(t)
             let div = document.createElement('div')
-                div.innerHTML = "You have been hacked!!!"
-                let terminal = document.querySelector('.terminal')
-                terminal.append(div)
+            div.innerHTML = "You have been hacked!!!"
+            let terminal = document.querySelector('.terminal')
+            terminal.append(div)
             terminal.style.color = 'red'
         }
         main()
