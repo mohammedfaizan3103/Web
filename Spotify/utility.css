@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #1a1a1a;
+}
+
+.flex {
+    display: flex;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-grey {
+    background-color: #121212;
+}
+.bg-black {
+    background-color: black;
+}
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.hide {
+    display: none;
+}
+.pointer {
+    cursor: pointer;
+}

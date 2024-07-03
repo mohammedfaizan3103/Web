@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primary: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black; 
+    color: white
+}
+
+.main {
+    display: flex;
+}
+
+.left {
+    width: 25vw;
+
+}
+
+.right {
+    margin-left: 0px;
+    margin: 3px;
+    /* padding: 15px;    */
+    width: 75vw;
+    border-radius: 7px;
+    position: relative;
+}
+
+.top {
+    padding: 15px;
+    margin: 3px;
+    border-radius: 7px;
+}
+
+.library {
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 7px;
+    padding: 15px;
+    position: relative;
+    min-height: 67vh;
+    /* overflow-y: scroll; */
+}
+
+.logo {
+    margin: 15px;
+    margin-bottom: 0px;
+}
+
+.left-logo {
+    height: 25px;
+}
+
+.home {
+    margin: 15px;
+}
+
+.search {
+    margin: 15px;
+}
+
+.home-search span {
+    margin-left: 20px;
+}
+
+.playlist {
+    margin: 5px;
+}
+
+.library h2 {
+    margin: 5px;
+}
+
+.library span {
+    margin-top: 9px;
+    margin-left: 5px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    gap: 2px;
+    margin: 9px;
+    margin-left: 0px;
+}
+
+.footer div {
+    margin-bottom: 3px;
+}
+
+.footer a {
+    color: grey;
+    text-decoration: none;
+}
+
+.right-logo {
+    height: 15px;
+}
+
+.arrow {
+    gap: 20px;
+}
+
+.header {
+    justify-content: space-between;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.header>.arrow {
+    padding: 15px;
+}
+
+.sign .button {
+    width: 90px;
+    height: 47px;
+    border-radius: 22px;
+}
+.signup-btn {
+    background-color: #121212;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.signup-btn:hover {
+    color: white;
+    font-size: 1.05em;
+}
+.login-btn {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.login-btn:hover {
+    width: 92px;
+    height: 49px;
+}
+.spotifyPlaylist {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 12px;
+    border-radius: 7px;
+    margin-top: 3px;
+}
+
+.cardContainer {
+    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    max-height: 74vh;
+    overflow-y: scroll;
+}
+
+.card {
+    width: 160px;
+    padding: 6px;
+    border-radius: 7px;
+    background-color: #252525;
+    position: relative;
+    cursor: pointer;
+}
+
+.card>* {
+    padding-top: 4px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 7px;
+    object-fit: contain;
+}
+
+.card p {
+    font-size: 14px;
+    color: rgb(174, 174, 174);
+}
+.circle-div {
+    width: 35px;
+    height: 35px;
+    padding-top: 0px;
+    background-color: rgb(39, 221, 39);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 160px;
+    right: 10px;
+    opacity: 0;
+    transition: all 0.3s ease-out
+}
+.play-button {
+    fill: black;
+}
+.bring-play {
+    top: 130px;
+    opacity: 1;
+}
+.playbar {
+    position: absolute;
+    bottom: 0;
+    background-color: #252525;
+    width: 98%;
+    padding: 8px;
+    /* display: flex; */
+    border-radius: 10px;
+    /* justify-content: center; */
+}
+.songbuttons {
+    display: flex;
+    /* width: 100%; */
+    gap: 12px;
+    justify-content: center;
+}
+.songlist {
+    height: 50vh;
+    margin-bottom: 41px;
+    overflow-y: scroll;
+}
+.songlist ul {
+    margin: 12px 15px;
+    
+}
+.songlist ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin: 8px 0px;
+}
+.info {
+    gap: 20px;
+    align-items: center;
+}
+.play {
+    transform: translateY(2px);
+}
+.seekbar {
+    height: 2px;
+    width: 100%;
+    border: 1px solid aqua;
+    margin-top: 10px;
+    border-radius: 10px;
+    /* margin-bottom: 3px; */
+}
+.circle_seek{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: relative;
+    bottom: 5.2px;
+    left: 0%;
+    transition: left 0.5s;
+}
+.controlsTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.songinfo {
+    margin-left: 10px;
+    font-size: 18px;
+    justify-self: flex-start;
+    position: absolute;
+    left: 0px;
+}
+
+.songtime {
+    margin-right: 10px;
+    justify-self: flex-end;
+    position: absolute;
+    right: 0px;
+    
+}
