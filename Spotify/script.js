@@ -1,7 +1,6 @@
 console.log("Hello World")
 let cards = document.querySelectorAll(".card")
 for (let card of cards) {
-    // console.log()
     card.addEventListener('mouseover', () => {
         let play = card.querySelector('.circle-div')
         play.classList.add('bring-play')
@@ -11,7 +10,13 @@ for (let card of cards) {
         play.classList.remove('bring-play')
     })
 }
-
+const setHeight = () => {
+    let top_h = document.querySelector('.top').offsetHeight
+    let left = document.querySelector('.left').offsetHeight
+    document.querySelector('.library').style.height = (95 -  (top_h / left) * 100) + '%'
+}
+setHeight()
+window.addEventListener('resize', setHeight)
 function convertSecondsToMinutes(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
@@ -19,11 +24,18 @@ function convertSecondsToMinutes(seconds) {
     const formattedSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
     return minutes + ':' + formattedSeconds;
 }
+document.querySelector('.hamburger').addEventListener('click', () =>  {
+    document.querySelector('.left').style.left = 0;
+})
+
+document.querySelector('.close').addEventListener('click', () => {
+    // this wont work when screen is higher than 1000 because position property is not set for it
+    document.querySelector('.left').style.left = '-1000px';
+}) 
 
 async function getSongs() {
     let songsFolder = await fetch('http://127.0.0.1:3000/Spotify/songs/')
     let text = await songsFolder.text()
-    // console.log(text)
     let div = document.createElement('div')
     div.innerHTML = text
     div.id = 'songs-folder'
@@ -35,10 +47,8 @@ async function getSongs() {
             songs.push(link)
         }
     }
-    // console.log(songs)
     let ul = document.querySelector('.songlist').querySelector('ul')
     for (let song of songs) {
-        // console.log(song)
         ul.innerHTML = ul.innerHTML + `
                         <li data-songurl = "${song}">
                             <div class="info flex">
@@ -56,40 +66,38 @@ async function getSongs() {
 }
 
 async function main() {
-    
-    // player.hidden = true;
     let playbar = document.querySelector('.playbar')
     let song_index = -1;
-    await getSongs()
-    let songlist = document.querySelector('.songlist').querySelectorAll('li')
-    // console.log(x)
-    var currentSong = new Audio();
-    for(let i = 0; i < songlist.length; i++) {
-        let li = songlist[i]
+    const playsong = (song_in, change) => {
+        if(song_index != -1) {
+            songlist[song_index].querySelector('.play').querySelector('img').src = "assests/play.svg"
+        }
+        let li = songlist[song_in + change]
         let playbutton = li.querySelector('.play')
         let img = playbutton.querySelector('img')
-        playbutton.addEventListener('click', () => {
+        currentSong.src =li.dataset.songurl
+        let name = li.querySelector('.info').querySelector('div').innerHTML.trim()
+        document.querySelector('.songinfo').innerHTML = name
+        currentSong.play()
+        player.src = "assests/pause.svg"
+        img.src = "assests/pause.svg"
+        playbar.classList.remove('hide')
+        song_index = song_in + change
+    }
+    await getSongs()
+    let songlist = document.querySelector('.songlist').querySelectorAll('li')
+    var currentSong = new Audio();
+    for(let i = 0; i < songlist.length; i++) {
+        songlist[i].querySelector('.play').addEventListener('click', () => {
             if(song_index != i) {
-                if(song_index != -1) {
-                    songlist[song_index].querySelector('.play').querySelector('img').src = "assests/play.svg"
-                }
-                currentSong.src =li.dataset.songurl
-                console.log(li)
-                let name = li.querySelector('.info').querySelector('div').innerHTML.trim()
-                console.log(name)
-                document.querySelector('.songinfo').innerHTML = name
-                currentSong.play()
-                player.src = "assests/pause.svg"
-                img.src = "assests/pause.svg"
-                playbar.classList.remove('hide')
-                song_index = i
+                playsong(i, 0)
             }
             else {
-                let img = playbutton.querySelector('img')
+                let img = songlist[i].querySelector('.play').querySelector('img')
+                console.log(songlist[i].querySelector('.play').querySelector('img'))
                 if(currentSong.paused) {
                     currentSong.play()
                     player.src = "assests/pause.svg"
-                    console.log(img)
                     img.src = "assests/pause.svg"
                 }
                 else {
@@ -100,7 +108,6 @@ async function main() {
             }
         })
     }
-    // let songbuttons = document.querySelector('.songbuttons')
     let songbuttons = document.querySelector('.songbuttons')
     let player = songbuttons.children[1];
     player.addEventListener('click', () => {
@@ -117,7 +124,6 @@ async function main() {
         }
     })
     currentSong.addEventListener('timeupdate', () => {
-        // console.log(currentSong.currentTime, currentSong.duration)
         let currentTime = convertSecondsToMinutes(currentSong.currentTime)
         let duration = convertSecondsToMinutes(currentSong.duration)
         document.querySelector('.songtime').innerHTML = `${currentTime}/${duration}`
@@ -133,5 +139,34 @@ async function main() {
         document.querySelector('.circle_seek').style.left = position + "%"
         currentSong.currentTime = (position/100) * currentSong.duration
     })
+    document.querySelector('.songbuttons').children[0].addEventListener('click', () => {
+        if(song_index - 1 < 0) {
+            console.log('no previous song')
+        }
+        else {
+            playsong(song_index, -1)
+        }
+    }) 
+    document.querySelector('.songbuttons').children[2].addEventListener('click', () => {
+        if(song_index + 1 >= songlist.length) {
+            console.log('no next song')
+        }
+        else {
+            playsong(song_index, 1)
+        }
+    }) 
+    document.querySelector('.volume').querySelector('img').addEventListener('click', () => {
+        let input = document.querySelector('.volume').querySelector('input').classList
+        if(input.contains('hide')) {
+            input.remove('hide')
+        }
+        else {
+            input.add('hide')
+        }
+    })
+    document.querySelector('.volume').querySelector('input').addEventListener('change', (event) => {
+        currentSong.volume = event.target.value / 100
+    })
 }
+
 main()

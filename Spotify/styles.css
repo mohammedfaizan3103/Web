@@ -20,7 +20,10 @@ body {
 
 .left {
     width: 25vw;
-
+    transition: left 1s;
+    z-index: 3;
+    left: 0px;
+    height: 99vh;
 }
 
 .right {
@@ -30,6 +33,7 @@ body {
     width: 75vw;
     border-radius: 7px;
     position: relative;
+    height: 99vh;
 }
 
 .top {
@@ -44,7 +48,7 @@ body {
     border-radius: 7px;
     padding: 15px;
     position: relative;
-    min-height: 67vh;
+    /* min-height: 67vh; */
     /* overflow-y: scroll; */
 }
 
@@ -164,11 +168,12 @@ body {
     flex-wrap: wrap;
     gap:10px;
     max-height: 74vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+    
 }
 
 .card {
-    width: 160px;
+    width: 175px;
     padding: 6px;
     border-radius: 7px;
     background-color: #252525;
@@ -220,6 +225,7 @@ body {
     padding: 8px;
     /* display: flex; */
     border-radius: 10px;
+    z-index: 5;
     /* justify-content: center; */
 }
 .songbuttons {
@@ -231,7 +237,7 @@ body {
 .songlist {
     height: 50vh;
     margin-bottom: 41px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .songlist ul {
     margin: 12px 15px;
@@ -290,6 +296,68 @@ body {
     margin-right: 10px;
     justify-self: flex-end;
     position: absolute;
-    right: 0px;
-    
+    right: 50px;
+}
+.hamburger {
+    height: 20px;
+    display: none;
+}
+.move {
+    position: relative;
+    top:2px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: none;
+}
+.volume {
+    position: absolute;
+    right: 13px;
+    top: 2px;
+}
+.volume input {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -54px;
+    bottom: 88px;
+}
+@media (max-width: 1200px) {
+    .left {
+        position: absolute;
+        left: -1000px;
+        transition: left 1s;
+        z-index: 3;
+        width: 350px;
+        height: 100vh;
+    }
+    .right {
+        width: 100vw;
+    }
+    .close {
+        display: inline;
+    }
+    .hamburger {
+        display: inline;
+    }
+}
+@media (max-width: 750px) {
+    .cardContainer {
+        justify-content: space-evenly;
+    }
+    .card {
+        width:220px;
+    }
+}
+@media (max-width: 400px) {
+    .songtime{
+        right: 38px;
+    }
+    .songtime {
+        font-size: 14px;
+    }
+    .songinfo {
+        font-size: 16px;
+    }
 }
