@@ -1,0 +1,10 @@
+let date = new Date()
+console.log(date)
+console.log(date.toString())
+console.log(date.toJSON())
+console.log(date.toISOString())
+console.log(date.toDateString())
+console.log(date.toLocaleString())
+// months start from 0 but yyyy-mm-dd months are from 1
+let newdate = new Date(2023, 0, 12)
+console.log(newdate.toDateString())
