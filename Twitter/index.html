@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/output.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex w-[100vw] main bg-black text-white">
+        <div class="first w-full flex items-end flex-col">
+            <div class="sidebar py-2 flex flex-col items-center">
+                <ul class="flex flex-col justify-center text-xl font-bold px-16">
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full"><img class="w-8 invert my-2" src="assets/logo.svg" alt="X"></li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">home</span>Home</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">search</span>Explore</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">Notifications</span>Notifications</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">Mail</span>Messages</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">Bookmarks</span>Bookmarks</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">communities</span>Communities</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">search</span>Premium</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">person</span>Profile</li>
+                    <li class="flex align-center gap-3 border border-black px-4 py-2 rounded-full hover:bg-gray-900 cursor-pointer"><span class="material-symbols-outlined text-2xl">more</span>More</li>
+                </ul>
+                <div class="btn bg-blue-400 font-bold my-3 cursor-pointer p-2 px-6 text-md rounded-full w-1/2 text-center">Post</div>
+            </div>
+        </div>
+        <div class="second w-full border-[1px] border-x-white border-y-black">
+            <div class="top flex">
+                <div class="foryou text-center w-full flex flex-col items-center justify-center relative">
+                    <p>For You</p>
+                    <div class="bg-blue-500 h-[4px] w-16 rounded-full absolute bottom-0"></div>
+                </div>
+                <div class="following text-center w-full flex items-center justify-center">
+                    Following
+                </div>
+                <div class="setting px-2 py-1">
+                    <span class="material-symbols-outlined text-2xl">settings</span>
+                </div>
+            </div>
+            <div class="h-0.5 my-0.5 w-full bg-gray-700"></div>
+            <div class="post flex p-5 pb-2">
+                <div class="post-img mr-4 mb-0">
+                    <img src="assets/pfp1.jpg" alt="" class="dp rounded-full w-10">
+                </div>
+                <div class="post-content w-full gap-y-8">
+                    <input class="bg-black text-white min-h-10 flex w-full outline-none" type="text" placeholder="Whats happening"></input>
+                    <div class="reply text-blue-400 flex gap-1 text-xs items-center my-2">
+                        <span class="material-symbols-outlined text-sm">globe</span>
+                        <p>Everyone can reply</p>
+                    </div>
+                    <div class="sep h-0.5 bg-gray-700 w-full my-2"></div>
+                    <div class="blueicons flex justify-between items-center">
+                        <div class="icons flex text-blue-400 gap-2">
+                            <span class="material-symbols-outlined text-[20px]">perm_media</span>
+                            <span class="material-symbols-outlined text-[20px]">gif_box</span>
+                            <span class="material-symbols-outlined text-[20px]">ballot</span>
+                        </div>
+                        <div class="btn bg-blue-400 font-bold opacity-50 hover:opacity-100 cursor-pointer p-2 px-6 text-md rounded-full">Post</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sep h-0.5 bg-gray-700 w-full my-0"></div>
+        </div>
+        <div class="third w-full">
+            <input class="bg-gray-900 rounded-full mx-4 my-4 px-3 py-1.5 w-2/3" type="text" placeholder="Search">
+            <div class="what m-4 mt-0 bg-gray-900 w-2/3 rounded-md">
+                <h2 class="text-xl font-bold px-3 py-1.5">What's Happening</h2>
+                <div class="item my-3 hover:bg-gray-800 px-3 py-1.5 rounded-md cursor-pointer">
+                    <div class="text-gray-400 text-sm">Trending in India</div>
+                    <div class="text-lg font-semibold">Orry</div>
+                    <div class="text-gray-400 text-sm">40.3k Posts</div>
+                </div>
+                <div class="item my-3 hover:bg-gray-800 px-3 py-1.5 rounded-md cursor-pointer">
+                    <div class="text-gray-400 text-sm">Trending in India</div>
+                    <div class="text-lg font-semibold">Orry</div>
+                    <div class="text-gray-400 text-sm">40.3k Posts</div>
+                </div>
+                <div class="item my-3 hover:bg-gray-800 px-3 py-1.5 rounded-md cursor-pointer">
+                    <div class="text-gray-400 text-sm">Trending in India</div>
+                    <div class="text-lg font-semibold">Orry</div>
+                    <div class="text-gray-400 text-sm">40.3k Posts</div>
+                </div>
+                <div class="item my-3 hover:bg-gray-800 px-3 py-1.5 rounded-md cursor-pointer">
+                    <div class="text-gray-400 text-sm">Trending in India</div>
+                    <div class="text-lg font-semibold">Orry</div>
+                    <div class="text-gray-400 text-sm">40.3k Posts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
