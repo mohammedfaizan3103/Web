@@ -11,13 +11,13 @@
             padding: 0;
         }
         .hero {
-            height: 80vh;
+            /* height: 80vh; */
             background-color:  #F3EED9;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 15em;
+            padding: 12em 15em;
         }
         .hero p {
             font-size: 18px;
@@ -68,6 +68,32 @@
         }
         p {
             font-size: 21px;
+        }
+        @media (max-width: 850px) {
+            .hero, .top, .bottom, .paras {
+                flex-direction: column;
+                align-items: center;
+            } 
+        }
+        @media (max-width: 500px) {
+            img {
+                width: 90%;
+            }
+            .hero {
+                padding: 6em 9em;
+            }
+            .hero p {
+                font-size: 12px;
+            }
+            .hero h1 {
+                font-size: 48px;
+            }
+            .design {
+                padding: 3em;
+            }
+            .bottom, .top {
+                padding: 3em;
+            }
         }
     </style>
 </head>
